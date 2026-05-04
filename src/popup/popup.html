@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Grouper</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tab Organizer</h1>
+      <p class="subtitle">Active window only</p>
+    </header>
+    
+    <main>
+      <div id="active-window-info">
+        <div class="window-header">
+          <span class="window-title">Current Window</span>
+          <span id="tab-count" class="tab-count">0 tabs</span>
+        </div>
+        <div id="groups-list" class="groups-list">
+          <!-- Groups will be listed here -->
+        </div>
+      </div>
+      
+      <button id="organize-btn" class="action-btn">Organize Tabs</button>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

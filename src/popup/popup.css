@@ -1,0 +1,140 @@
+:root {
+  /* Light Mode (Default) */
+  --bg-color: #f8fafd;
+  --on-bg-color: #1f1f1f;
+  --surface-color: #ffffff;
+  --on-surface-color: #1f1f1f;
+  --primary-color: #0b57d0;
+  --on-primary-color: #ffffff;
+  --secondary-container: #e8eaed;
+  --on-secondary-container: #202124;
+  --border-color: #c7c7c7;
+  --text-secondary: #444746;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #131314;
+    --on-bg-color: #e3e3e3;
+    --surface-color: #1e1f20;
+    --on-surface-color: #e3e3e3;
+    --primary-color: #a8c7fa;
+    --on-primary-color: #062e6f;
+    --secondary-container: #333537;
+    --on-secondary-container: #e3e3e3;
+    --border-color: #444746;
+    --text-secondary: #c4c7c5;
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--on-bg-color);
+  margin: 0;
+  padding: 16px;
+  box-sizing: border-box;
+  width: 320px;
+  border-radius: 16px;
+  /* Fixed width for popup */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin: 0 0 4px 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+#active-window-info {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.window-title {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--on-surface-color);
+}
+
+.tab-count {
+  font-size: 0.75rem;
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.groups-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.group-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 8px;
+}
+
+.action-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  /* Pill button */
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+}
+
+.action-btn:active {
+  transform: scale(0.98);
+}
+
+.action-btn:disabled {
+  background-color: var(--secondary-container);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+  opacity: 0.7;
+}

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Classifier",
+  "version": "1.0.0",
+  "description": "Uses Gemini Nano in Chrome to automatically classify and group tabs in the current window",
+  "background": {
+    "service_worker": "src/background/index.js",
+    "type": "module"
+  },
+  "permissions": [
+    "tabs",
+    "tabGroups"
+  ],
+  "action": {
+    "default_title": "Tab Classifier",
+    "default_popup": "src/popup/popup.html"
+  },
+  "icons": {
+    "16": "images/gemini-tab.png",
+    "48": "images/gemini-tab.png",
+    "128": "images/gemini-tab.png"
+  }
+}
